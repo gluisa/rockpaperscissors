@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+     
+    function getComputerChoice(computerChoice) {
+        let randomNum = Math.floor(Math.random() * 3) + 1;
+
+        if (randomNum == 1) {
+            computerChoice = "paper"
+        }
+        else if (randomNum == 2){
+            computerChoice = "rock"
+        }
+        else if (randomNum == 3){
+            computerChoice = "scissor"
+        }
+        return computerChoice;
+    }
+    console.log(computerChoice);
+
+    function getHumanChoice(humanChoice)
+        {
+            humanChoice = prompt("Rock, paper, or scissor?");
+            return humanChoice;
+        }
+    console.log(humanChoice);
+
+
+
+</script>
+    
+</body>
+</html>
+
