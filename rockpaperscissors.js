@@ -26,8 +26,17 @@ function getHumanChoice(humanChoice)
 
 function playGame(humanChoice, computerChoice){
     
+    
     let humanScore = 0;
     let computerScore = 0;
+
+    for (let i = 0; i < 5; i++)
+        {
+            const humanChoice = getHumanChoice();
+            const computerChoice = getComputerChoice();
+            playRound(humanChoice, computerChoice);
+       }
+
     function playRound(humanChoice, computerChoice){
         if(humanChoice === computerChoice) {
             console.log("Nobody won! " + "Your score: " + humanScore +  " " + "Computer Score: " + computerScore);
@@ -62,12 +71,6 @@ function playGame(humanChoice, computerChoice){
         }
     }
 
-    for (let i = 0; i < 5; i++)
-        {
-            const humanChoice = getHumanChoice();
-            const computerChoice = getComputerChoice();
-            playRound(humanChoice, computerChoice);
-       }
     
     if (computerScore == humanScore) {
         console.log("It's a tie! FINAL- Your score: " + humanScore +  " " + "Computer Score: " + computerScore);
