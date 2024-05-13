@@ -7,7 +7,9 @@
 </head>
 <body>
 <script>
-     
+    
+   
+
     function getComputerChoice(computerChoice) {
         let randomNum = Math.floor(Math.random() * 3) + 1;
 
@@ -31,8 +33,71 @@
         }
     console.log(humanChoice);
 
+    
+    playRound(humanSelection, computerChoice);
 
 
+    function playGame(){
+        let humanScore = 0;
+        let computerScore = 0;
+        let numGames = 0;
+
+        while (numGames <= 5) {
+            playRound(humanChoice, computerChoice);
+        }
+        
+        
+
+        function playRound(humanChoice, computerChoice){
+        let humanSelection = humanChoice.toLowerCase();
+        let computerSelection = computerChoice;
+        
+
+        if(humanSelection=="rock" && computerSelection=="rock" || humanSelection=="paper" && computerSelection=="paper" || humanSelection=="scissor" && computerSelection=="scissor") {
+            console.log("Nobody won!" + "Your score: " + humanScore + "Computer Score: " + computerScore)
+            numGames++;
+        }
+        else if (humanSelection == "rock" && computerSelection == "scissor") {
+            console.log("You won! Rock beats scissor" + "Your score: " + humanScore + "Computer Score: " + computerScore)
+            humanScore++;
+            numGames++;
+
+        }
+        else if (humanSelection == "scissor" && computerSelection == "paper") {
+            console.log("You won! Scissor beats paper" + "Your score: " + humanScore + "Computer Score: " + computerScore)
+            humanScore++;
+            numGames++;
+
+        }
+        else if (humanSelection == "paper" && computerSelection == "rock") {
+            console.log("You won! Paper beats rock" + "Your score: " + humanScore + "Computer Score: " + computerScore)
+            humanScore++;
+            numGames++;
+
+        }
+        else if (humanSelection == "scissor" && computerSelection == "rock" ) {
+            console.log("You lost! Scissor loses to rock" + "Your score: " + humanScore + "Computer Score: " + computerScore)
+            humanScore--;
+            numGames++;
+
+        }
+        else if (humanSelection == "rock" && computerSelection == "paper" ) {
+            console.log("You lost! Rock loses to paper" + "Your score: " + humanScore + "Computer Score: " + computerScore)
+            humanScore--;
+            numGames++;
+
+        }
+        else if(humanSelection == "paper" && computerSelection == "scissor"){
+            console.log("You lost! Paper loses to scissor" + "Your score: " + humanScore + "Computer Score: " + computerScore)
+            humanScore--;
+            numGames++;
+        }
+    }
+    
+
+
+
+    }
 </script>
     
 </body>
