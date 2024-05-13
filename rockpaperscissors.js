@@ -19,7 +19,7 @@ function getComputerChoice(computerChoice) {
 function getHumanChoice(humanChoice)
     {
         humanChoice = prompt("Rock, paper, or scissor?");
-        humanChoice = humanChoice.toLowerCase();
+       // humanChoice = humanChoice.toLowerCase();
         return humanChoice;
     }
 
@@ -35,14 +35,16 @@ function playGame(){
 
     playRound(humanSelection, computerSelection)  
 
-/*
+//makes it run 5 times
     while (numGames <= 4){
         getHumanChoice()
         getComputerChoice()
         playRound(humanSelection, computerSelection)  
     }
     
-*/
+
+
+
     function playRound(humanSelection, computerSelection){
 
         
