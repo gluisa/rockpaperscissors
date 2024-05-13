@@ -33,55 +33,57 @@ function playGame(){
     let computerScore = 0;
     let numGames = 0;
 
+    playRound(humanSelection, computerSelection)  
+
+/*
     while (numGames <= 4){
-        gethumanChoice()
+        getHumanChoice()
         getComputerChoice()
         playRound(humanSelection, computerSelection)  
     }
     
-
+*/
     function playRound(humanSelection, computerSelection){
 
         
     
         if(humanSelection=="rock" && computerSelection=="rock" || humanSelection=="paper" && computerSelection=="paper" || humanSelection=="scissor" && computerSelection=="scissor") {
-            console.log("Nobody won! " + "Your score: " + humanScore +  " " + "Computer Score: " + computerScore)
             numGames++;
+            console.log("Nobody won! " + "Your score: " + humanScore +  " " + "Computer Score: " + computerScore)
         }
         else if (humanSelection == "rock" && computerSelection == "scissor") {
-            console.log("You won! Rock beats scissor" + " " + "Your score: " + humanScore +  " " + "Computer Score: " + computerScore)
             humanScore++;
             numGames++;
-    
+            console.log("You won! Rock beats scissor" + " " + "Your score: " + humanScore +  " " + "Computer Score: " + computerScore)      
         }
         else if (humanSelection == "scissor" && computerSelection == "paper") {
-            console.log("You won! Scissor beats paper" +  " " + "Your score: " + humanScore +  " " + "Computer Score: " + computerScore)
             humanScore++;
             numGames++;
+            console.log("You won! Scissor beats paper" +  " " + "Your score: " + humanScore +  " " + "Computer Score: " + computerScore)
     
         }
         else if (humanSelection == "paper" && computerSelection == "rock") {
-            console.log("You won! Paper beats rock" +  " " + "Your score: " + humanScore +  " " + "Computer Score: " + computerScore)
             humanScore++;
             numGames++;
+            console.log("You won! Paper beats rock" +  " " + "Your score: " + humanScore +  " " + "Computer Score: " + computerScore)          
     
         }
         else if (humanSelection == "scissor" && computerSelection == "rock" ) {
-            console.log("You lost! Scissor loses to rock" +  " " + "Your score: " + humanScore  + " " + "Computer Score: " + computerScore)
             humanScore--;
             numGames++;
-    
+            console.log("You lost! Scissor loses to rock" +  " " + "Your score: " + humanScore  + " " + "Computer Score: " + computerScore)
+
         }
         else if (humanSelection == "rock" && computerSelection == "paper" ) {
-            console.log("You lost! Rock loses to paper" +  " " + "Your score: " + humanScore +  " " + "Computer Score: " + computerScore)
             humanScore--;
             numGames++;
+            console.log("You lost! Rock loses to paper" +  " " + "Your score: " + humanScore +  " " + "Computer Score: " + computerScore)
     
         }
         else if(humanSelection == "paper" && computerSelection == "scissor"){
-            return console.log("You lost! Paper loses to scissor" +  " " + "Your score: " + humanScore + " "+ "Computer Score: " + computerScore)
             humanScore--;
             numGames++;
+            return console.log("You lost! Paper loses to scissor" +  " " + "Your score: " + humanScore + " "+ "Computer Score: " + computerScore)         
         }
     }
     
