@@ -22,7 +22,7 @@ function getHumanChoice(humanChoice)
         humanChoice = humanChoice.toLowerCase();
         return humanChoice;
     }
-//get
+
 
 function playGame(humanChoice, computerChoice){
     
