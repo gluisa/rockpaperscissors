@@ -43,8 +43,6 @@ function playRound(humanChoice){
         results = computerWinnerText;
         isAWinner = true;
     }
-
-
     winnerText.textContent = results;
     humanScoreText.textContent = "Player: " + humanScore;
     computerScoreText.textContent = "Computer: " + computerScore;
@@ -52,7 +50,7 @@ function playRound(humanChoice){
 }
 
 function reset() {
-    winnerText.textContent = "Round winner: none";
+    winnerText.textContent = "Winner: None";
 
     humanScoreText.textContent = "Player: 0";
     computerScoreText.textContent = "Computer: 0";
